@@ -1,0 +1,25 @@
+name: SYNC_REPO_EVERYDAY
+
+on:
+  schedule:
+    - cron:  '*/60 * * * *'
+  push:
+    branches:
+      - master
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        
+    - name: GitHub Repo Sync
+      uses: douglaskastle/github-sync@master
+      with:
+        source_repo: "OrekiYuta/orekiyuta.github.io"
+        destination_repo: "CatToCat/orekiyuta.github.io"
+        source_branch: "master"
+        destination_branch: "master"
+        github_token: ${{ secrets.PAT }}
+        password: ${{ secrets.PAT }}
