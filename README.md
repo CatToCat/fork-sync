@@ -5,10 +5,6 @@
     
 -   No one can stay a kid forever.
     
--   Time moves on, and people grow up.
-    
--   We must go our separate ways.
-    
--   You must keep going even after I'm gone.
+.
 
 
